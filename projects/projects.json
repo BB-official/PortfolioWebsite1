@@ -8,19 +8,19 @@
     "category": "website",
     "links": {
       "view": "#",
-      "code": "#"
+      "code": "https://github.com/BB-official/portfolio.github.io"
     }
   },
   
  
   {
-    "name": "demo",
-    "desc": "The project is about my personal portfolio .",
-    "image": "templeweb",
-    "category": "basicweb",
+    "name": "Personal portfolio",
+    "desc": "The project is about my personal portfolio . In which Multiple languages and tools are used like (html ,css ,JS , EmailJS ,json) . ",
+    "image": "Portfolio",
+    "category": "website",
     "links": {
       "view": "#",
-      "code": "#"
+      "code": "https://github.com/BB-official/portfolio.github.io"
     }
   }
 ]
