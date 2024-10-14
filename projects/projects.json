@@ -10,6 +10,17 @@
       "view": "#",
       "code": "https://github.com/BB-official/PortfolioWebsite1"
     }
+  },
+
+  {
+    "name": "Personal Portfolio",
+    "desc": "The project is about my personal portfolio . In which Multiple languages and tools are used like (html ,css ,JS , EmailJS ,json) . ",
+    "image": "Portfolio",
+    "category": "website",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/BB-official/PortfolioWebsite1"
+    }
   }
   
 ]
