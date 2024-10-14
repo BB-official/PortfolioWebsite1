@@ -3,7 +3,7 @@
   
   {
     "name": "Personal portfolio",
-    "desc": "Basic burger shop webpage allow users to check menu and price. Dummy Order Form.",
+    "desc": "The project is about my personal portfolio . In which Multiple languages and tools are used like (html ,css ,JS , EmailJS ,json) . ",
     "image": "Portfolio",
     "category": "website",
     "links": {
@@ -14,9 +14,9 @@
   
  
   {
-    "name": "Indian Temples",
-    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
-    
+    "name": "demo",
+    "desc": "",
+    "image": "templeweb",
     "category": "basicweb",
     "links": {
       "view": "#",
