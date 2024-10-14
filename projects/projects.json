@@ -4,7 +4,7 @@
   {
     "name": "Personal Portfolio",
     "desc": "The project is about my personal portfolio . In which Multiple languages and tools are used like (html ,css ,JS , EmailJS ,json) . ",
-    "image": "https://img.icons8.com/?size=100&id=NCqJQS7FhAqd&format=png&color=000000",
+    "image": "Portfolio",
     "category": "website",
     "links": {
       "view": "#",
@@ -14,15 +14,14 @@
   
  
   {
-    "name": "Personal portfolio",
-    "desc": "The project is about my personal portfolio . In which Multiple languages and tools are used like (html ,css ,JS , EmailJS ,json) . ",
-    "image": "https://img.icons8.com/?size=100&id=NCqJQS7FhAqd&format=png&color=000000",
+    "name": "Demo project",
+    "desc": "Demo project ",
+    "image": "demo1",
     "category": "website",
     "links": {
       "view": "#",
-      "code": "https://github.com/BB-official/PortfolioWebsite1"
+      "code": "#"
     }
   }
-
-
+  
 ]
