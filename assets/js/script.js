@@ -238,5 +238,91 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
 
-        // Optional: Add animation or transition effects
-        document.body.style.transition = 'backgroun
+        // Add transition effects
+        document.body.style.transition = 'background-color 0.3s, color 0.3s';
+        document.querySelectorAll('*').forEach(element => {
+            element.style.transition = 'background-color 0.3s, color 0.3s';
+        });
+
+        // Update toggle button icons
+        const sunIcon = themeToggler.querySelector('.fa-sun');
+        const moonIcon = themeToggler.querySelector('.fa-moon');
+
+        if (newTheme === 'dark') {
+            sunIcon.style.opacity = '1';
+            sunIcon.style.transform = 'translateY(0)';
+            moonIcon.style.opacity = '0';
+            moonIcon.style.transform = 'translateY(-20px)';
+        } else {
+            sunIcon.style.opacity = '0';
+            sunIcon.style.transform = 'translateY(20px)';
+            moonIcon.style.opacity = '1';
+            moonIcon.style.transform = 'translateY(0)';
+        }
+    });
+
+    // Apply initial icon states based on saved theme
+    const sunIcon = themeToggler.querySelector('.fa-sun');
+    const moonIcon = themeToggler.querySelector('.fa-moon');
+    
+    if (savedTheme === 'dark') {
+        sunIcon.style.opacity = '1';
+        sunIcon.style.transform = 'translateY(0)';
+        moonIcon.style.opacity = '0';
+        moonIcon.style.transform = 'translateY(-20px)';
+    }
+});
+
+// Function to handle theme-specific particle colors
+function updateParticleColors(theme) {
+    if (typeof particlesJS !== 'undefined') {
+        const particleColors = theme === 'dark' 
+            ? {
+                particles: {
+                    color: {
+                        value: '#ffffff'
+                    },
+                    line_linked: {
+                        color: '#ffffff'
+                    }
+                }
+            }
+            : {
+                particles: {
+                    color: {
+                        value: '#000000'
+                    },
+                    line_linked: {
+                        color: '#000000'
+                    }
+                }
+            };
+
+        particlesJS('particles-js', particleColors);
+    }
+}
+
+// Media Query Handler for System Theme Preference
+const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function handleSystemThemeChange(e) {
+    if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        updateParticleColors(newTheme);
+    }
+}
+
+systemThemeQuery.addListener(handleSystemThemeChange);
+
+// Additional Theme-related Functionality
+function applyThemeStyles(theme) {
+    const root = document.documentElement;
+    
+    if (theme === 'dark') {
+        root.style.setProperty('--shadow-color', 'rgba(255, 255, 255, 0.1)');
+        root.style.setProperty('--card-bg', '#2d2d2d');
+    } else {
+        root.style.setProperty('--shadow-color', 'rgba(0, 0, 0, 0.1)');
+    }
+}
