@@ -192,7 +192,7 @@ srtop.reveal('.home .github', { interval: 800 });
 srtop.reveal('.home .twitter', { interval: 1000 });
 srtop.reveal('.home .telegram', { interval: 600 });
 srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
@@ -219,3 +219,24 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+
+
+// Theme Toggler
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggler = document.querySelector('.theme-toggler');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggler.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        // Update theme
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Optional: Add animation or transition effects
+        document.body.style.transition = 'backgroun
